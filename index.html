@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Score Tracker</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <span class="cue-ball" aria-hidden="true"></span>
+      <div>
+        <p class="eyebrow">Change name snooker league</p>
+        <h1>Table One</h1>
+      </div>
+    </div>
+    <div class="event-status"><span class="status-dot"></span> Tournament in progress</div>
+  </header>
+
+  <main class="container">
+    <section class="panel matches-panel">
+      <div class="tournament-banner">
+        <div>
+          <p class="eyebrow">Round robin</p>
+          <h2>Match Centre</h2>
+          <p class="tagline">Results, standings and table history.</p>
+        </div>
+        <div class="table-number" aria-label="Table one">1</div>
+      </div>
+      <p id="status-message" class="status" role="status" aria-live="polite"></p>
+      <div id="admin-controls" class="admin-only" hidden>
+        <div class="section-title"><span>01</span><h2>Players</h2></div>
+        <form id="add-player-form" class="row">
+          <input id="player-name" placeholder="Player name" required />
+          <button type="submit">Add</button>
+        </form>
+
+        <div class="section-title"><span>02</span><h2>Record a result</h2></div>
+        <form id="record-match-form" class="column">
+          <label>Winner
+            <select id="winner-select" required></select>
+          </label>
+          <label>Loser
+            <select id="loser-select" required></select>
+          </label>
+          <div class="row">
+            <input id="match-note" placeholder="Note (optional)" />
+            <button type="submit">Record Match</button>
+          </div>
+        </form>
+
+        <div class="controls">
+          <button id="clear-data">Reset All Data</button>
+        </div>
+        <div class="controls admin-only">
+          <button id="export-json">Export JSON</button>
+          <input id="import-json" type="file" accept="application/json" style="display:none" />
+          <button id="import-json-btn">Import JSON</button>
+          <button id="save-native" style="display:none">Save To File</button>
+          <button id="load-native" style="display:none">Load From File</button>
+        </div>
+      </div>
+
+      <div class="section-title results-title"><span>Recent</span><h2>Match results</h2></div>
+      <div id="matches-list" class="list"></div>
+    </section>
+
+    <aside class="panel aside standings-panel">
+      <p class="eyebrow">League table</p>
+      <h2>Standings</h2>
+      <p class="standings-caption">Points are ordered by wins.</p>
+      <div id="leaderboard" class="list"></div>
+      <div class="legend"><span><b>W</b> Wins</span><span><b>L</b> Losses</span></div>
+    </aside>
+  </main>
+
+  <script src="js/app.js" defer></script>
+</body>
+</html>
