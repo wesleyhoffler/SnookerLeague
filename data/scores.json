@@ -1,5 +1,14 @@
 [
   {
+    "id": "b40669d8-6548-48ba-b70d-21bf44dca6d6",
+    "winnerId": "0bc7b306-979b-4684-b040-e4f82ad1a3da",
+    "loserId": "a82adf5b-354a-46f3-9f6c-449e95af4b2d",
+    "winnerName": "David",
+    "loserName": "John",
+    "note": "63 - 56",
+    "recordedAt": "2026-09-19T15:44:33.589Z"
+  },
+  {
     "id": "27445b11-4fe4-492f-9030-4423ef361b64",
     "winnerId": "e500f614-b433-4005-a220-e7951b5ca4bd",
     "loserId": "0bc7b306-979b-4684-b040-e4f82ad1a3da",
